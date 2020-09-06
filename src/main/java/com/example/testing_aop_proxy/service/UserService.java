@@ -1,6 +1,7 @@
 package com.example.testing_aop_proxy.service;
 
 import com.example.testing_aop_proxy.dto.User;
+import com.example.testing_aop_proxy.dto.UserDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -29,10 +30,10 @@ public class UserService {
         return User.getRandomUser(id);
     }
 
-    public String createUser(User user) {
+    public String createUser(UserDto userDto) {
         wait(100); // emulate load from other microservice/db
 
-        return User.getRandomUser().getId();
+        return userDto.toUser().getId();
     }
 
     private void wait(int timeInMs) {

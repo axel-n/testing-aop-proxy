@@ -1,6 +1,7 @@
 package com.example.testing_aop_proxy.controller;
 
 import com.example.testing_aop_proxy.dto.User;
+import com.example.testing_aop_proxy.dto.UserDto;
 import com.example.testing_aop_proxy.entity.Statistic;
 import com.example.testing_aop_proxy.service.StatisticService;
 import com.example.testing_aop_proxy.service.UserService;
@@ -42,9 +43,9 @@ public class UserController {
     }
 
     @PostMapping("/users")
-    public String createUser(@RequestBody User user) {
+    public String createUser(@RequestBody UserDto userDto) {
         long startedTime = System.currentTimeMillis();
-        String id =  userService.createUser(user);
+        String id =  userService.createUser(userDto);
         statisticService.save(getStatistic("createUser", startedTime, id));
         return id;
     }
