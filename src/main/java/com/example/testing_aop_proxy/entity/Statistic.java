@@ -1,12 +1,17 @@
 package com.example.testing_aop_proxy.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 @Data
 @Entity
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Statistic {
 
     @Id
@@ -14,12 +19,10 @@ public class Statistic {
     private long id;
 
     @Column(nullable = false)
-    private String className;
+    private String packageName;
 
     @Column(nullable = false)
     private String method;
-
-    private String requestId;
 
     private long duration;
 
