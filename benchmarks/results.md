@@ -45,10 +45,10 @@ in code setup wait 100ms
 # ab results
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    1   0.4      1       2
-Processing:   202  208   2.2    208     218
-Waiting:      202  207   2.0    207     218
-Total:        202  208   2.2    208     219
+Connect:        0    1   2.3      0      12
+Processing:   102  118  32.5    106     233
+Waiting:      101  118  32.2    106     233
+Total:        102  119  34.6    106     243
 ```
 
 ```bash
