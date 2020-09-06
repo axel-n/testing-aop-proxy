@@ -1,10 +1,12 @@
 package com.example.testing_aop_proxy.entity;
 
+import lombok.Builder;
 import lombok.Data;
 import javax.persistence.*;
 
 @Data
 @Entity
+@Builder
 public class Statistic {
 
     @Id
@@ -17,10 +19,9 @@ public class Statistic {
     @Column(nullable = false)
     private String method;
 
-    @Column(nullable = false)
     private String requestId;
 
     private long duration;
 
-    private long created = System.currentTimeMillis();
+    private long created;
 }
