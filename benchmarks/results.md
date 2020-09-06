@@ -1,21 +1,22 @@
 # Benchmark results
+send 100k requests for every method
 
 ## Get users
 in code setup wait 200ms
 ```bash
 # ab results
 Connection Times (ms)
-                 min  mean[+/-sd] median   max
-   Connect:        0    0   0.5      0       3
-   Processing:   203  230  34.2    216     381
-   Waiting:      203  224  25.1    215     378
-   Total:        203  230  34.3    216     381
+              min  mean[+/-sd] median   max
+Connect:        0    1  13.8      0    1019
+Processing:   209 1016  46.7   1018    1141
+Waiting:      208 1015  46.8   1017    1139
+Total:        229 1016  47.0   1018    1975
 ```
 
 ```bash
 # in db
-max - 225
-avg - 200.7465
+max - 269
+avg - 200.297025
 min - 200
 ```
 
@@ -26,16 +27,16 @@ in code setup wait 50ms
 # ab results
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    1   2.0      0       9
-Processing:    54   69  12.3     66     176
-Waiting:       53   68  12.0     65     168
-Total:         54   70  13.5     67     182
+Connect:        0    0   2.8      0      55
+Processing:    52  269  20.6    261     389
+Waiting:       52  269  20.6    261     389
+Total:         95  270  19.1    261     389
 ```
 
 ```bash
 # in db
-max - 83
-avg - 50.819
+max - 164
+avg - 50.34625
 min - 50
 ```
 
@@ -45,15 +46,15 @@ in code setup wait 100ms
 # ab results
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    1   2.3      0      12
-Processing:   102  118  32.5    106     233
-Waiting:      101  118  32.2    106     233
-Total:        102  119  34.6    106     243
+Connect:        0    0   2.7      0      56
+Processing:   107  514  22.8    514     609
+Waiting:      106  514  22.8    514     609
+Total:        158  515  20.4    514     610
 ```
 
 ```bash
 # in db
-max - 137
-avg - 101.8395
+max - 141
+avg - 100.19088
 min - 100
 ```
