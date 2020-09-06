@@ -7,16 +7,16 @@ in code setup wait 200ms
 # ab results
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    1   3.2      0      56
-Processing:   216 1017  53.2   1020    1139
-Waiting:      209 1017  53.3   1020    1139
-Total:        266 1018  50.3   1021    1139
+Connect:        0    1  13.8      0    1019
+Processing:   209 1016  46.7   1018    1141
+Waiting:      208 1015  46.8   1017    1139
+Total:        229 1016  47.0   1018    1975
 ```
 
 ```bash
 # in db
-max - 247
-avg - 200.4182
+max - 269
+avg - 200.297025
 min - 200
 ```
 
@@ -27,16 +27,16 @@ in code setup wait 50ms
 # ab results
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    1   8.8      0    1029
-Processing:    54  271  21.5    261     554
-Waiting:       54  270  21.5    261     554
-Total:         78  271  22.9    261    1289
+Connect:        0    0   2.8      0      55
+Processing:    52  269  20.6    261     389
+Waiting:       52  269  20.6    261     389
+Total:         95  270  19.1    261     389
 ```
 
 ```bash
 # in db
-max - 83
-avg - 50.139
+max - 164
+avg - 50.34625
 min - 50
 ```
 
@@ -46,15 +46,15 @@ in code setup wait 100ms
 # ab results
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   6.1      0    1013
-Processing:   104  514  24.3    514     620
-Waiting:      103  513  24.3    514     620
-Total:        124  514  23.2    514    1522
+Connect:        0    0   2.7      0      56
+Processing:   107  514  22.8    514     609
+Waiting:      106  514  22.8    514     609
+Total:        158  515  20.4    514     610
 ```
 
 ```bash
 # in db
-max - 137
-avg - 100.199
+max - 141
+avg - 100.19088
 min - 100
 ```
